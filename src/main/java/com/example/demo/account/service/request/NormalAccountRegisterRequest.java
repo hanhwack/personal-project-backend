@@ -10,11 +10,10 @@ public class NormalAccountRegisterRequest {
 
     final private String email;
     final private String password;
-    final private String name;
-    final private int phoneNumber;
+
 
 
     public Account toAccount () {
-        return new Account(email, password, name, phoneNumber);
+        return new Account(email, password);
     }
 }

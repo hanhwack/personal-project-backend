@@ -10,18 +10,15 @@ import lombok.NoArgsConstructor;
 public class Account {
 
     @Id
-
+    @Column(name = "account_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String email;
     private String password;
-    private String name;
-    private int phoneNumber;
 
-    public Account(String email, String password, String name, int phoneNumber) {
+    public Account(String email, String password) {
         this.email = email;
         this.password = password;
-        this.name = name;
-        this.phoneNumber = phoneNumber;
+
     }
 }

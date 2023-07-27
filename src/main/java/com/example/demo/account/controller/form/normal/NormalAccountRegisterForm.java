@@ -11,13 +11,12 @@ public class NormalAccountRegisterForm {
 
     final private String email;
     final private String password;
-    final private String name;
-    final private int phoneNumber;
+
 
 
     public NormalAccountRegisterRequest toAccountRegisterRequest () {
 
         return new NormalAccountRegisterRequest(
-                email, password, name, phoneNumber);
+                email, password);
     }
 }

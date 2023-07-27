@@ -12,12 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/account-page")
+@RequestMapping("/account")
 public class AccountController {
 
     final private AccountService accountService;
 
-    // 일반 회원
     @PostMapping("/register")
     public Boolean normalAccountRegister (@RequestBody NormalAccountRegisterForm registerForm) {
         return accountService.normalAccountRegister(registerForm.toAccountRegisterRequest());
