@@ -10,8 +10,10 @@ import lombok.NoArgsConstructor;
 public class Account {
 
     @Id
+    @Getter
     @Column(name = "account_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
     private String email;
     private String password;
